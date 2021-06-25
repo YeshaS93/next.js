@@ -72,6 +72,22 @@ describe('Font Optimization', () => {
       ],
       'https://use.typekit.net',
     ],
+    [
+      'typography',
+      [
+        'https://cloud.typography.com/759638/676208/css/fonts.css',
+        'https://cloud.typography.com/759638/676208/css/fonts.css',
+        'https://cloud.typography.com/759638/676208/css/fonts.css',
+        'https://cloud.typography.com/759638/676208/css/fonts.css',
+      ],
+      [
+        /<style data-href="https:\/\/cloud.typography.com\/759638\/676208\/css\/fonts.css">.*<\/style>/,
+        /<style data-href="https:\/\/cloud.typography.com\/759638\/676208\/css\/fonts.css">.*<\/style>/,
+        /<style data-href="https:\/\/cloud.typography.com\/759638\/676208\/css\/fonts.css">.*<\/style>/,
+        /<style data-href="https:\/\/cloud.typography.com\/759638\/676208\/css\/fonts.css">.*<\/style>/,
+      ],
+      'https://cloud.typography.com',
+    ],
   ])(
     'with-%s',
     (

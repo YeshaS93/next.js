@@ -41,5 +41,10 @@ export const GOOGLE_FONT_PROVIDER = 'https://fonts.googleapis.com/css'
 export const OPTIMIZED_FONT_PROVIDERS = [
   { url: GOOGLE_FONT_PROVIDER, preconnect: 'https://fonts.gstatic.com' },
   { url: 'https://use.typekit.net', preconnect: 'https://use.typekit.net' },
+  // Typography.com
+  {
+    url: 'https://cloud.typography.com',
+    preconnect: 'https://cloud.typography.com',
+  },
 ]
 export const STATIC_STATUS_PAGES = ['/500']
