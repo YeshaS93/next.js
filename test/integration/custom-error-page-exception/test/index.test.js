@@ -11,11 +11,10 @@ const navSel = '#nav'
 const errorMessage = 'Application error: a client-side exception has occurred'
 
 describe('Custom error page exception', () => {
-  it('should display captured error when it occurs on client rendering', async () => {
-    let { stderr, code } = await nextBuild(appDir, [], { stderr: true })
-    console.error(stderr)
+  it('should handle errors from _error render', async () => {
+    const { code } = await nextBuild(appDir)
     const appPort = await findPort()
-    const app = await nextStart(appDir, appPort, { stderr: true })
+    const app = await nextStart(appDir, appPort)
     const browser = await webdriver(appPort, '/')
     await browser.waitForElementByCss(navSel).elementByCss(navSel).click()
     const text = await (await browser.elementByCss('#__next')).text()
